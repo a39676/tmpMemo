@@ -1,0 +1,23 @@
+	public ScreenshotSaveResult screenshotSave(WebDriver d, String targetFolderPath, String fileNamePrefix) {
+
+		TakeScreenshotSaveDTO dto = new TakeScreenshotSaveDTO();
+
+		dto.setDriver(d);
+
+		return screenshotSave(dto, targetFolderPath, fileNamePrefix);
+
+	}
+
+	
+
+	public ScreenshotSaveResult screenshotSave(WebDriver d, WebElement ele, String targetFolderPath, String fileNamePrefix) {
+
+		TakeScreenshotSaveDTO dto = new TakeScreenshotSaveDTO();
+
+		dto.setDriver(d);
+
+		dto.setEle(ele);
+
+		return screenshotSave(dto, targetFolderPath, fileNamePrefix);
+
+	}
